@@ -16,7 +16,7 @@ export default class Button {
         if (this.w >= 500){
             noStroke();
             if (this.isActive === true){
-                fill(200, 200, 0, 192);
+                fill(255, 200, 0, 192);
                 }
                 if (this.isActive === false){
                 fill(0, 0, 0, 80);
@@ -36,7 +36,7 @@ export default class Button {
         } else {
         noStroke();
         if (this.isActive === true){
-            fill(200, 200, 0, 192);
+            fill(255, 200, 0, 192);
             }
             if (this.isActive === false){
             fill(0, 0, 0, 80);
