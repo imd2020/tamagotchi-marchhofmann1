@@ -8,15 +8,15 @@ export default class Background {
 
     display() {
     if (this.state === "start"){
-        image(titlescreen, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(images.titlescreen, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
 
     if (this.state === "tutorial1"){
-        image(tutorial1, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(images.tutorial1, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
 
     if (this.state === "tutorial2"){
-        image(tutorial2, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(images.tutorial2, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
     
 

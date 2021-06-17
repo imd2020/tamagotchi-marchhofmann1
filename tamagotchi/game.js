@@ -3,67 +3,69 @@ import Background from "./background.js";
 import Parameter from "./parameter.js";
 import Animal from "./animal.js";
 
-default1M = loadImage("./default1M.png");
-bored1M = loadImage("./bored1M.png");
-happy1M = loadImage("./happy1M.png");
-hungry1M = loadImage("./hungry1M.png");
-sleeping1M = loadImage("./sleeping1M.png");
-unhappy1M = loadImage("./unhappy1M.png");
+let images = {
+    default1M: loadImage("./default1M.png"),
+    bored1M: loadImage("./bored1M.png"),
+    happy1M: loadImage("./happy1M.png"),
+    hungry1M: loadImage("./hungry1M.png"),
+    sleeping1M: loadImage("./sleeping1M.png"),
+    unhappy1M: loadImage("./unhappy1M.png"),
 
-default1F = loadImage("./default1F.png");
-bored1F = loadImage("./bored1F.png");
-happy1F = loadImage("./happy1F.png");
-hungry1F = loadImage("./hungry1F.png");
-sleeping1F = loadImage("./sleeping1F.png");
-unhappy1F = loadImage("./unhappy1F.png");
+    default1F: loadImage("./default1F.png"),
+    bored1F: loadImage("./bored1F.png"),
+    happy1F: loadImage("./happy1F.png"),
+    hungry1F: loadImage("./hungry1F.png"),
+    sleeping1F: loadImage("./sleeping1F.png"),
+    unhappy1F: loadImage("./unhappy1F.png"),
 
-default1S = loadImage("./default1S.png");
-bored1S = loadImage("./bored1S.png");
-happy1S = loadImage("./happy1S.png");
-hungry1S = loadImage("./hungry1S.png");
-sleeping1S = loadImage("./sleeping1S.png");
-unhappy1S = loadImage("./unhappy1S.png");
+    default1S: loadImage("./default1S.png"),
+    bored1S: loadImage("./bored1S.png"),
+    happy1S: loadImage("./happy1S.png"),
+    hungry1S: loadImage("./hungry1S.png"),
+    sleeping1S: loadImage("./sleeping1S.png"),
+    unhappy1S: loadImage("./unhappy1S.png"),
 
-default2M = loadImage("./default2M.png");
-bored2M = loadImage("./bored2M.png");
-happy2M = loadImage("./happy2M.png");
-hungry2M = loadImage("./hungry2M.png");
-sleeping2M = loadImage("./sleeping2M.png");
-unhappy2M = loadImage("./unhappy2M.png");
+    default2M: loadImage("./default2M.png"),
+    bored2M: loadImage("./bored2M.png"),
+    happy2M: loadImage("./happy2M.png"),
+    hungry2M: loadImage("./hungry2M.png"),
+    sleeping2M: loadImage("./sleeping2M.png"),
+    unhappy2M: loadImage("./unhappy2M.png"),
 
-default2F = loadImage("./default2F.png");
-bored2F = loadImage("./bored2F.png");
-happy2F = loadImage("./happy2F.png");
-hungry2F = loadImage("./hungry2F.png");
-sleeping2F = loadImage("./sleeping2F.png");
-unhappy2F = loadImage("./unhappy2F.png");
+    default2F: loadImage("./default2F.png"),
+    bored2F: loadImage("./bored2F.png"),
+    happy2F: loadImage("./happy2F.png"),
+    hungry2F: loadImage("./hungry2F.png"),
+    sleeping2F: loadImage("./sleeping2F.png"),
+    unhappy2F: loadImage("./unhappy2F.png"),
 
-default2S = loadImage("./default2S.png");
-bored2S = loadImage("./bored2S.png");
-happy2S = loadImage("./happy2S.png");
-hungry2S = loadImage("./hungry2S.png");
-sleeping2S = loadImage("./sleeping2S.png");
-unhappy2S = loadImage("./unhappy2S.png");
+    default2S: loadImage("./default2S.png"),
+    bored2S: loadImage("./bored2S.png"),
+    happy2S: loadImage("./happy2S.png"),
+    hungry2S: loadImage("./hungry2S.png"),
+    sleeping2S: loadImage("./sleeping2S.png"),
+    unhappy2S: loadImage("./unhappy2S.png"),
 
-default3M = loadImage("./default3M.png");
-unhappy3M = loadImage("./unhappy3M.png");
+    default3M: loadImage("./default3M.png"),
+    unhappy3M: loadImage("./unhappy3M.png"),
 
-default3F = loadImage("./default3F.png");
-unhappy3F = loadImage("./unhappy3F.png");
+    default3F: loadImage("./default3F.png"),
+    unhappy3F: loadImage("./unhappy3F.png"),
 
-default3S = loadImage("./default3S.png");
-unhappy3S = loadImage("./unhappy3S.png");
+    default3S: loadImage("./default3S.png"),
+    unhappy3S: loadImage("./unhappy3S.png"),
 
-default1E = loadImage("./default1E.png");
-default2E = loadImage("./default2E.png");
-default3E = loadImage("./default3E.png");
+    default1E: loadImage("./default1E.png"),
+    default2E: loadImage("./default2E.png"),
+    default3E: loadImage("./default3E.png"),
 
-titlescreen = loadImage("./titlescreen.jpg");
-tutorial1 = loadImage("./tutorial1.jpg");
-tutorial2 = loadImage("./tutorial2.jpg");
+    titlescreen: loadImage("./titlescreen.jpg"),
+    tutorial1: loadImage("./tutorial1.jpg"),
+    tutorial2: loadImage("./tutorial2.jpg"),
 
-dead1 = loadImage("./dead1.png");
-dead2 = loadImage("./dead2.png");
+    dead1: loadImage("./dead1.png"),
+    dead2: loadImage("./dead2.png"),
+};
 
 //creating classes
 let background = new Background(0, 0, 1, "null");
@@ -1045,3 +1047,5 @@ function draw(){
         }
     }
 }
+
+window.draw = draw;
