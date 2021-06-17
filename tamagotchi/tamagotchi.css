@@ -1,0 +1,14 @@
+html {
+  background-color: #000000;
+}
+
+h1{
+  text-align: center;
+  color:#ffffff;
+  font-family: Helvetica;
+  font-weight: lighter;
+}
+
+#tamagotchi {
+  text-align: center;
+}
