@@ -68,7 +68,7 @@ let images = {
 };
 
 //creating classes
-let background = new Background(0, 0, 1, "null");
+let background = new Background(0, 0, 1, "null", images);
 let parameter1 = new Parameter(16, 16, 180, 80, 1, color(180, 120, 40), 18, "Sympathie:", 0);
 let parameter2 = new Parameter(212, 16, 180, 80, 1, color(180, 120, 40), 18, "Freude:", 0);
 let parameter3 = new Parameter(408, 16, 180, 80, 1, color(180, 120, 40), 18, "Hunger:", 0);
@@ -83,7 +83,7 @@ let button3 = new Button(16, 408, 180, 80, 1, false, color(0, 50, 100), 20, "nul
 let button4 = new Button(16, 504, 180, 80, 1, false, color(0, 50, 100), 20, "null", "");
 let textbox = new Button(212, 504, 572, 80, 1, false, color(220, 220, 220), 20, "null", "null");
 
-let animal = new Animal(350, 165, 300, 300, 1, "default", "S", 1);
+let animal = new Animal(350, 165, 300, 300, 1, "default", "S", 1, images);
 
 let globalTime = 0;
 let globalState = "start";
@@ -972,7 +972,7 @@ function mouseClicked(){
         }
     }
 
-    if (globalAge === 20) {
+    if (globalAge === 20 && (parameter1.value + parameter2.value + 100 - parameter3.value + 100 - parameter4.value) >= 200) {
         button1.text = "Neustart";
         button2.text = "";
         button3.text = "";
@@ -984,6 +984,22 @@ function mouseClicked(){
 
         animal.state = "default";
         textbox.text = name.text + " ist ausgewachsen und hatte eine tolle Zeit mit dir!";
+        textbox.text2 = "Erreichte Punktzahl: " + (parameter1.value + parameter2.value + 100 - parameter3.value + 100 - parameter4.value);
+        textbox.isActive = false;
+    }
+
+    if (globalAge === 20 && (parameter1.value + parameter2.value + 100 - parameter3.value + 100 - parameter4.value) <= 200) {
+        button1.text = "Neustart";
+        button2.text = "";
+        button3.text = "";
+        button4.text = "";
+        button1.isActive = true;
+        button2.isActive = false;
+        button3.isActive = false;
+        button4.isActive = false;
+
+        animal.state = "unhappy";
+        textbox.text = name.text + " ist ausgewachsen und will dich endlich verlassen.";
         textbox.text2 = "Erreichte Punktzahl: " + (parameter1.value + parameter2.value + 100 - parameter3.value + 100 - parameter4.value);
         textbox.isActive = false;
     }

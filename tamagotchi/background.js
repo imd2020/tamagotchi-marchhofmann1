@@ -1,22 +1,25 @@
 export default class Background {
-    constructor(x, y, s, state){
+    constructor(x, y, s, state, images){
         this.x = x;
         this.y = y;
         this.s = s;
         this.state = state;
+        this.titlescreen = images.titlescreen;
+        this.tutorial1 = images.tutorial1;
+        this.tutorial2 = images.tutorial2;
     }
 
     display() {
     if (this.state === "start"){
-        image(images.titlescreen, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(this.titlescreen, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
 
     if (this.state === "tutorial1"){
-        image(images.tutorial1, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(this.tutorial1, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
 
     if (this.state === "tutorial2"){
-        image(images.tutorial2, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
+        image(this.tutorial2, this.s * this.x, this.s * this.y, this.s * 800, this.s * 600);
         }
     
 
