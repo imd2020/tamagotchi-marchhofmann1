@@ -1065,3 +1065,4 @@ function draw(){
 }
 
 window.draw = draw;
+window.mouseClicked = mouseClicked;
