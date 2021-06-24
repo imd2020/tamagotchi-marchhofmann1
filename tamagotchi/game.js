@@ -1064,5 +1064,44 @@ function draw(){
     }
 }
 
+function animalAnimation() {
+    if (animal.state === "dead"){
+    gsap.to(animal, {
+        duration: 0.6,
+        ease: "in",
+        y: 165,
+        onComplete: () => {
+            gsap.to(animal, {
+                duration: 0.5,
+                ease: "out",
+                y: 165,
+                onComplete: () => {
+                    animalAnimation();
+                },
+            });
+        },
+    });
+    }else{
+        gsap.to(animal, {
+            duration: 0.6,
+            ease: "in",
+            y: 155,
+            onComplete: () => {
+                gsap.to(animal, {
+                    duration: 0.5,
+                    ease: "out",
+                    y: 165,
+                    onComplete: () => {
+                        animalAnimation();
+                    },
+                });
+            },
+        });
+    }
+}
+
+animalAnimation();
+
+
 window.draw = draw;
 window.mouseClicked = mouseClicked;
